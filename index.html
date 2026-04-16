@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lyric</title>
+  <link rel="icon" href="imagens/lpdf.png" type="image/png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Montserrat:ital,wght@0,600;1,600&display=swap" rel="stylesheet">
+
+
+  <!-- Estilos CSS -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+  
+<body>
+  <div id = "home">
+    <!-- Topbar fixa -->
+    <header id="topbar">
+      <div class="title">
+        <h1>Lyric</h1><h2>.pdf</h2>
+      </div>
+      <p class="subtitle">Crie apresentações com um clique!</p>
+      <p class="credits">ig: @tallyson123_</p>
+    </header>
+
+    <!-- Área de texto para colar letras -->
+    <textarea 
+      id="lyrics-input" 
+      placeholder="Cole aqui a letra completa da música..."
+      style="
+        width: 300px; 
+        overflow-y: hidden; 
+        resize: none; 
+        max-height: 300px; 
+        transition: max-height 0.05s ease-out; 
+        height: 50px;
+      "
+    ></textarea>
+
+    <!-- Frame que contém os slides -->
+    <div id="slides-frame" style="display:none;">
+      <input 
+        type="text" 
+        id="searchSlidesInput" 
+        placeholder="Pesquisar slides..." 
+        style="width: 35%; padding: 8px; margin-bottom: 10px; background: #f9f9f9; border: 0px; color: #532e99; font-family: 'Montserrat', sans-serif;">
+
+      <div id="slides-container"></div>
+    </div>
+
+    <!-- Botão para ver os slides criados -->
+    <div id="container-btns">
+      <button id="view-slides-btn">Disponíveis</button>
+    </div>
+  </div>
+  
+  <!-- Apresentação (inicialmente oculta) -->
+  <div id="presentation">
+    <div id="musicInfo">
+      <div id="disco-container" title="Clique para alterar a imagem do meio">
+        <img id="disco" src="imagens/disco.png" alt="Disco" />
+        <img id="imagemCentral" src="imagens/nulo.png" alt="Imagem no meio" />
+      </div>
+      <div id="musicTitleAndName">
+        <h1 id="musicTitle">Louvor</h1>
+        <div id="musicNameContainer">
+          <h2 id="musicName"></h2>
+          <input type="text" id="musicNameInput" placeholder="Digite o nome da música" />
+        </div>
+      </div>
+    </div>
+    <div id="slide-wrapper">
+      <div id="slide-text"></div>
+    </div>
+    <button id="close-btn">Fechar</button>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
